@@ -207,9 +207,17 @@ button:hover {
 }
 
 @media screen and (min-width: 600px){
+    body {
+        height: 100vh;
+        background-size: 100% 50%;
+        align-items: flex-start;
+    }
+
     nav {
-        max-width: 1440px;
+        max-width: 1300px;
         position: relative;
+        margin-bottom: 0;
+        left: 14%;
     }
 
     .page_container {
@@ -218,11 +226,35 @@ button:hover {
         align-items: center;
         justify-content: center;
         flex-wrap: nowrap;
+        overflow: hidden;
     }
 
     .intro_container, main {
         width: 49%;
+        height: 100vh;
         margin: 0;
+    }
+
+    .intro_container {
+        background-position: center;
+    }
+
+    main {
+        justify-content: center;
+    }
+
+    h1 {
+        font-size: 5rem;
+        line-height: 5rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    main p {
+        font-size: 1.5rem;
+        width: 60%;
     }
 
     .ham {
@@ -231,6 +263,35 @@ button:hover {
 
     .pages {
         display: flex;
+    }
+
+    .pages a {
+        text-decoration: none;
+        color: var(--Very-Dark-Blue);
+        margin: 0 1.5rem;
+    }
+
+    .pages a:hover {
+        text-decoration: underline;
+    }
+
+    a.login {
+        border-left: 8px dotted var(--Grayish-Blue);
+        padding-left: 3rem;
+        color: var(--Grayish-Blue);
+    }
+
+    .schedule {
+        justify-content: flex-start;
+    }
+
+    button {
+        width: 25%;
+        font-size: 1rem;
+    }
+
+    .schedule p {
+        font-size: 1.1rem;
     }
 }
 
